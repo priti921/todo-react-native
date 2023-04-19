@@ -1,16 +1,1 @@
-# Expo Router Example
-
-Use [`expo-router`](https://expo.github.io/router) to build native navigation using files in the `app/` directory.
-
-## 🚀 How to use
-
-```sh
-npx create-react-native-app -t with-router
-```
-
-## 📝 Notes
-
-- [Expo Router: Docs](https://expo.github.io/router)
-- [Expo Router: Repo](https://github.com/expo/router)
-- [Request for Comments](https://github.com/expo/router/discussions/1)
-# todo-react-native
+ > This is a React Native todo app for staying organized and boosting productivity. With customizable features and real-time syncing, it's the perfect tool for managing your daily tasks 
