@@ -1,1 +1,0 @@
- > This is a React Native todo app for staying organized and boosting productivity. With customizable features and real-time syncing, it's the perfect tool for managing your daily tasks 
