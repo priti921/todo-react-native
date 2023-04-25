@@ -4,7 +4,9 @@ import TodoItem from '../components/TodoItem';
 
 const HomeScreen = () => {
   return (
-    <ScrollView className="px-10 py-16 bg-white">
+    <ScrollView className="px-5 py-16 bg-cyan-100">
+      <TodoItem>todo</TodoItem>
+      <TodoItem>todo</TodoItem>
       <TodoItem>todo</TodoItem>
     </ScrollView>
   );
