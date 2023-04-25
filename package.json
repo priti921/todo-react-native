@@ -1,0 +1,22 @@
+{
+  "name": "todo-react-native",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "sync": "git status && git add . && git commit -m \"$npm_config_first\" && git push && git status"
+  },
+  "dependencies": {
+    "expo": "~48.0.11",
+    "expo-status-bar": "~1.4.4",
+    "react": "18.2.0",
+    "react-native": "0.71.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  },
+  "private": true
+}
