@@ -11,10 +11,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-      <Stack.Screen name="Home" component={HomeScreen} options={{
-            title: "Home Title",
-
-            // Center the header title on Android
+      <Stack.Screen name="TODO" component={HomeScreen} options={{
+            title: "TODO",
             headerTitleAlign: "center",
           }}/>
       </Stack.Navigator>
