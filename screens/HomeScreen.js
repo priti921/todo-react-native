@@ -1,11 +1,12 @@
-import { View, Text } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 import React from 'react';
+import TodoItem from '../components/TodoItem';
 
 const HomeScreen = () => {
   return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-blue-500">HELLO WORLD! IN MOBILE!</Text>      
-    </View>
+    <ScrollView className="px-10 py-16 bg-white">
+      <TodoItem>todo</TodoItem>
+    </ScrollView>
   );
 };
 
