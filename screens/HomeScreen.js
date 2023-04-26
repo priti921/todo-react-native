@@ -8,6 +8,12 @@ import React, { useState } from "react";
 import TodoItem from "../components/TodoItem";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 
+/* 
+TODO: Add storage system
+*/
+
+
+
 const HomeScreen = () => {
   //state for todo data and textInput value
   const [data, setData] = useState(["Eat", "Sleep", "Code"]);
