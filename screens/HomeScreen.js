@@ -2,7 +2,7 @@ import { View, Text, ScrollView } from 'react-native';
 import React from 'react';
 import TodoItem from '../components/TodoItem';
 
-let data = ['eat','sleep', 'code']
+let data = ['Eat','Sleep', 'Code']
 
 const HomeScreen = () => {
   return (
