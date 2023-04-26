@@ -4,6 +4,7 @@ import TodoItem from '../components/TodoItem';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 const HomeScreen = () => {
+
   const [data, setData] = useState(['Eat','Sleep', 'Code']);
   const [text, setText] = useState('');
 
@@ -14,7 +15,8 @@ const HomeScreen = () => {
   }
 
   const handleAdd = ()=>{
-    console.log(add)
+    setData([...data, text]);
+    setText('');
   }
   return (
     <View className="bg-white h-full">
@@ -26,7 +28,7 @@ const HomeScreen = () => {
         keyboardType="default"
         className="bg-gray-100 rounded-lg flex-1 mx-1 px-5 py-2"
       />
-      <Pressable onPress={()=>handleAdd} className="bg-gray-100 rounded-lg px-2 py-2">
+      <Pressable onPress={handleAdd} className="bg-gray-100 rounded-lg px-2 py-2">
         <MaterialIcons name="add" size={30} color="black" />
       </Pressable>
 
