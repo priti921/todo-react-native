@@ -19,6 +19,8 @@ const HomeScreen = () => {
   const [data, setData] = useState(["Eat", "Sleep", "Code"]);
   const [text, setText] = useState("");
 
+
+
   //deletes the item selected
   const handleDelete = (item) => {
     const newData = data.filter((val) => val !== item); //filter out the item
@@ -31,8 +33,13 @@ const HomeScreen = () => {
     setData([...data, text]); //adding new data
     setText(""); // setting textInput value to empty
   };
+
+
+
+
   return (
     <View className="bg-white h-full">
+      
       <View className="flex-row items-center justify-between mx-5 mt-5">
         <TextInput
           onChangeText={setText} //set state on change
@@ -48,6 +55,8 @@ const HomeScreen = () => {
           <MaterialIcons name="add" size={30} color="black" />
         </Pressable>
       </View>
+
+
       <ScrollView className="px-5 py-8 bg-white">
         {data.map((item, index) => (
           <TodoItem
