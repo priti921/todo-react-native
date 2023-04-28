@@ -6,15 +6,25 @@ import {
   useState,
 } from "react";
 
-const state = [
+const initialState = [
   { name: "First Todo", isChecked: false },
   { name: "second todo", isChecked: true },
 ];
 
-const AppContext = createContext(state);
+const AppContext = createContext(initialState);
+
+const reducer = () => {};
 
 export const AppContextProvider = ({ children }) => {
-  return <AppContext.Provider value={state}>{children}</AppContext.Provider>;
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  const value = useMemo(() => {
+    return {
+      todoData: state,
+    };
+  }, [state]);
+
+  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
 
 export const useAppContext = () => {

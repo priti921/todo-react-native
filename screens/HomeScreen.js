@@ -9,7 +9,8 @@ TODO: Add storage system
 */
 
 const HomeScreen = () => {
-  const todoData = useAppContext();
+  const { todoData } = useAppContext();
+  console.log(todoData);
 
   //state for todo data and textInput value
   const [data, setData] = useState(["Eat", "Sleep", "Code"]);
