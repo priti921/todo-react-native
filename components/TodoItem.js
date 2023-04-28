@@ -6,9 +6,10 @@ import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 //add checkbox [done]
 //add delete button
 
-const TodoItem = ({ children, handleDelete }) => {
+const TodoItem = ({ todo, handleDelete }) => {
+  const { name, isChecked } = todo;
   //sets state for checkbox
-  const [isChecked, setIsChecked] = useState(false);
+  // const [isChecked, setIsChecked] = useState(false);
 
   return (
     <View className="bg-black p-4 rounded-md shadow-2xl my-2 flex-row align-center items-center">
@@ -23,7 +24,7 @@ const TodoItem = ({ children, handleDelete }) => {
           isChecked ? "line-through italic" : ""
         }`}
       >
-        {children}
+        {name}
       </Text>
       {/* show delete button if checkbox is checked */}
       {isChecked ? (

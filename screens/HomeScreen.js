@@ -1,25 +1,19 @@
-import {
-  View,
-  ScrollView,
-  TextInput,
-  Pressable,
-} from "react-native";
+import { View, ScrollView, TextInput, Pressable } from "react-native";
 import React, { useState } from "react";
 import TodoItem from "../components/TodoItem";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import { useAppContext } from "../data/context";
 
 /* 
 TODO: Add storage system
 */
 
-
-
 const HomeScreen = () => {
+  const todoData = useAppContext();
+
   //state for todo data and textInput value
   const [data, setData] = useState(["Eat", "Sleep", "Code"]);
   const [text, setText] = useState("");
-
-
 
   //deletes the item selected
   const handleDelete = (item) => {
@@ -34,12 +28,8 @@ const HomeScreen = () => {
     setText(""); // setting textInput value to empty
   };
 
-
-
-
   return (
     <View className="bg-white h-full">
-      
       <View className="flex-row items-center justify-between mx-5 mt-5">
         <TextInput
           onChangeText={setText} //set state on change
@@ -56,12 +46,11 @@ const HomeScreen = () => {
         </Pressable>
       </View>
 
-
       <ScrollView className="px-5 py-8 bg-white">
-        {data.map((item, index) => (
+        {todoData.map((item, index) => (
           <TodoItem
             key={index}
-            children={item}
+            todo={item}
             handleDelete={() => handleDelete(item)}
           />
         ))}
