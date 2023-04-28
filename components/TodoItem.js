@@ -3,19 +3,14 @@ import React, { useState } from "react";
 import Checkbox from "expo-checkbox";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 
-//add checkbox [done]
-//add delete button
-
-const TodoItem = ({ todo, handleDelete }) => {
+const TodoItem = ({ todo, handleDelete, handleToggle }) => {
   const { name, isChecked } = todo;
-  //sets state for checkbox
-  // const [isChecked, setIsChecked] = useState(false);
 
   return (
     <View className="bg-black p-4 rounded-md shadow-2xl my-2 flex-row align-center items-center">
       <Checkbox
         value={isChecked}
-        onValueChange={() => setIsChecked(!isChecked)}
+        onValueChange={()=>handleToggle(name)}
         className="p-2 mr-5"
         color={isChecked ? "black" : "white"}
       />
@@ -33,7 +28,7 @@ const TodoItem = ({ todo, handleDelete }) => {
             name="delete"
             size={24}
             color="white"
-            onPress={handleDelete}
+            onPress={()=>handleDelete(name)}
           />
         </Pressable>
       ) : null}
