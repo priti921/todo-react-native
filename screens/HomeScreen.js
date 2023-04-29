@@ -23,8 +23,9 @@ const HomeScreen = () => {
           onChangeText={setText} //set state on change
           value={text} //get state value
           placeholder="Add Todo"
+          placeholderTextColor="#808080" 
           keyboardType="default"
-          className="bg-gray-100 rounded-lg flex-1 mx-1 px-5 py-2"
+          className="bg-gray-900 rounded-lg flex-1 mr-1 px-5 py-2 border-8 text-white placeholder:italic"
         />
         {/*add button*/}
         <Pressable
@@ -32,9 +33,9 @@ const HomeScreen = () => {
             handleAdd(text)
             setText("")
           }}
-          className="bg-gray-100 rounded-lg px-2 py-2"
+          className="bg-black rounded-lg px-2 py-2 border-8"
         >
-          <MaterialIcons name="add" size={30} color="black" />
+          <MaterialIcons name="add" size={30} color="white" />
         </Pressable>
       </View>
 
