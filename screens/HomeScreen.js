@@ -14,6 +14,8 @@ const HomeScreen = () => {
 
   return (
     <View className="bg-white h-full">
+      
+      {/* input todo */}
      <InputTodo/>
 
       {/* todo */}

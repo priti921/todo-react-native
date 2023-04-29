@@ -10,7 +10,7 @@ const TodoItem = ({ todo, handleDelete, handleToggle }) => {
     <View className="bg-black p-4 rounded-md shadow-2xl my-2 flex-row align-center items-center">
       <Checkbox
         value={isChecked}
-        onValueChange={()=>handleToggle(name)}
+        onValueChange={() => handleToggle(name)}
         className="p-2 mr-5"
         color={isChecked ? "black" : "white"}
       />
@@ -28,7 +28,7 @@ const TodoItem = ({ todo, handleDelete, handleToggle }) => {
             name="delete"
             size={24}
             color="white"
-            onPress={()=>handleDelete(name)}
+            onPress={() => handleDelete(name)}
           />
         </Pressable>
       ) : null}
