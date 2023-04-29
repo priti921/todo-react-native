@@ -18,6 +18,10 @@ export default function App() {
             options={{
               title: "TODO",
               headerTitleAlign: "center",
+              headerStyle: {
+                backgroundColor: 'black',
+              },
+              headerTintColor: '#fff',
             }}
           />
         </Stack.Navigator>

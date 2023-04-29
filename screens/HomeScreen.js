@@ -13,13 +13,13 @@ const HomeScreen = () => {
 
 
   return (
-    <View className="bg-white h-full">
+    <View className="bg-cyan-500 h-full">
       
       {/* input todo */}
      <InputTodo/>
 
       {/* todo */}
-      <ScrollView className="px-5 py-8 bg-white">
+      <ScrollView className="px-5 py-8 bg-cyan-500">
         {todoData.map((item, index) => (
           <TodoItem key={index} todo={item} handleDelete={handleDelete} handleToggle={handleToggle}/>
         ))}

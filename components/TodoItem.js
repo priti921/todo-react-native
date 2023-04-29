@@ -7,7 +7,7 @@ const TodoItem = ({ todo, handleDelete, handleToggle }) => {
   const { name, isChecked } = todo;
 
   return (
-    <View className="bg-black p-4 rounded-md shadow-2xl my-2 flex-row align-center items-center">
+    <View className="bg-black p-4 rounded-md shadow-xl my-2 flex-row align-center items-center">
       <Checkbox
         value={isChecked}
         onValueChange={() => handleToggle(name)}
