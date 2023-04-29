@@ -1,44 +1,22 @@
-import { View, ScrollView, TextInput, Pressable } from "react-native";
-import React, { useState } from "react";
-import TodoItem from "../components/TodoItem";
-import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import { View, ScrollView } from "react-native";
+import React from "react";
 import { useAppContext } from "../data/context";
+import TodoItem from "../components/TodoItem";
+import InputTodo from "../components/InputTodo";
 
 /* 
 TODO: Add storage system
 */
 
 const HomeScreen = () => {
-  const { todoData, handleAdd, handleDelete, handleToggle } = useAppContext();
-  // console.log(todoData);
-
-  //state for todo data and textInput value
-  const [text, setText] = useState("");
+  const { todoData, handleDelete, handleToggle } = useAppContext();
 
 
   return (
     <View className="bg-white h-full">
-      <View className="flex-row items-center justify-between mx-5 mt-5">
-        <TextInput
-          onChangeText={setText} //set state on change
-          value={text} //get state value
-          placeholder="Add Todo"
-          placeholderTextColor="#808080" 
-          keyboardType="default"
-          className="bg-gray-900 rounded-lg flex-1 mr-1 px-5 py-2 border-8 text-white placeholder:italic"
-        />
-        {/*add button*/}
-        <Pressable
-          onPress={()=>{
-            handleAdd(text)
-            setText("")
-          }}
-          className="bg-black rounded-lg px-2 py-2 border-8"
-        >
-          <MaterialIcons name="add" size={30} color="white" />
-        </Pressable>
-      </View>
+     <InputTodo/>
 
+      {/* todo */}
       <ScrollView className="px-5 py-8 bg-white">
         {todoData.map((item, index) => (
           <TodoItem key={index} todo={item} handleDelete={handleDelete} handleToggle={handleToggle}/>
