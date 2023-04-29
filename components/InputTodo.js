@@ -24,7 +24,7 @@ const InputTodo = () => {
           handleAdd(text);
           setText("");
         }}
-        className="bg-black rounded-lg p-3"
+        className="bg-black rounded-lg p-3 border-2"
       >
         <MaterialIcons name="add" size={30} color="white" />
       </Pressable>
