@@ -27,7 +27,7 @@ const TodoItem = ({ todo, handleDelete, handleToggle }) => {
           <MaterialIcons
             name="delete"
             size={24}
-            color="white"
+            color="crimson"
             onPress={() => handleDelete(name)}
           />
         </Pressable>

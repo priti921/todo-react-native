@@ -13,7 +13,7 @@ const InputTodo = () => {
       <TextInput
         onChangeText={setText} //set state on change
         value={text} //get state value
-        placeholder="Add Todo"
+        placeholder="Start adding tasks..!"
         placeholderTextColor="#808080"
         keyboardType="default"
         className="bg-gray-900 rounded-lg flex-1 mr-1 px-5 py-2 border-8 text-white placeholder:italic"

@@ -7,8 +7,8 @@ import {
 
 //initial state
 const initialState = [
-  { name: "First Todo", isChecked: false },
-  { name: "second todo", isChecked: true },
+  { name: "Task due", isChecked: false },
+  { name: "Task done", isChecked: true },
 ];
 
 //initial placeholder functions
@@ -28,6 +28,10 @@ const reducer = (state, action) => {
   switch(action.type){
     case 'ADD': {
       // creating new todo object and passing in state
+      if(!action.payload.trim()){
+        alert('Please enter a todo')
+        return state;
+      }
       const newTodo = { name: action.payload, isChecked: false }
       return [...state, newTodo]
     }
