@@ -1,5 +1,5 @@
 import { View, Text, Pressable } from "react-native";
-import React, { useState } from "react";
+import React from "react";
 import Checkbox from "expo-checkbox";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 
