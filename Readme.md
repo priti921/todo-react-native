@@ -14,6 +14,14 @@
 
 ---
 
+<h3 align="center">Download it here</h3>
+<div align="center">
+<a href="https://expo.dev/artifacts/eas/hhcHb9YiMrVMFuXG2176fZ.apk" title="Download Icon">
+  <img src="./assets/icon.png" width="32px" />
+</a>
+</div>
+---
+
 ## 📍 Table of Contents
 
 - [🤖 Overview](#-overview)
