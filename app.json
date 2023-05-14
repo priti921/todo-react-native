@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "todo-react-native",
-    "slug": "todo-react-native",
+    "slug": "todo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundcolor": "#ffffff"
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
@@ -19,10 +19,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.priti921.todo"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b76d049c-694a-4b07-a656-3be5e60493e1"
+      }
+    },
+    "owner": "priti921"
   }
 }

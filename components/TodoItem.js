@@ -15,9 +15,8 @@ const TodoItem = ({ todo, handleDelete, handleToggle }) => {
         color={isChecked ? "black" : "white"}
       />
       <Text
-        className={`text-white text-xl tracking-widest ${
-          isChecked ? "line-through italic" : ""
-        }`}
+        className={`text-white text-xl tracking-widest text-wrap ${isChecked ? "line-through italic" : ""
+          }`}
       >
         {name}
       </Text>
