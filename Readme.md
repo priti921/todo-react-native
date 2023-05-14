@@ -20,9 +20,8 @@
   <img src="./assets/icon.png" width="32px" />
 </a>
 </div>
----
 
-## 📍 Table of Contents
+---
 
 - [🤖 Overview](#-overview)
 - [🗺 Sketch](#-sketch)
